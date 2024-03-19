@@ -1,0 +1,9 @@
+.model-viewer {
+  /* height: 90%; */
+  /* width: 450px; */
+  padding: 10px;
+}
+
+canvas {
+  height: 100vh !important;
+}

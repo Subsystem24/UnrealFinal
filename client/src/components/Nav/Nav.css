@@ -1,0 +1,60 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav .link-container a {
+  color: #fff;
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 0 1rem;
+}
+
+nav .link-container a:hover {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: #fff;
+  color: black;
+}
+
+.logo-container {
+  text-align: left;
+}
+
+.logo-container a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
+
+  nav .link-container, .logo-container {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  nav .link-container a {
+    margin: 0.5rem 0; /* Stack links vertically with space between */
+    display: block; /* Make each link full-width */
+  }
+}

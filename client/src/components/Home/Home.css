@@ -1,0 +1,42 @@
+/* Base styles */
+.landing-model-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.landing-home-container {
+  width: 60%;
+}
+
+.model-container {
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .landing-model-container {
+    margin-top: 170px;
+  }
+
+  .landing-home-container {
+    width: 100%;
+  }
+
+  .model-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .landing-model-container {
+    flex-direction: column;
+  }
+
+  .landing-home-container,
+  .model-container {
+    width: 100%;
+  }
+}

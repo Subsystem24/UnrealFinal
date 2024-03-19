@@ -1,0 +1,88 @@
+.landing-container {
+  /* margin-top: 100px; */
+  padding: 0px 50px;
+  /* width: 900px; */
+}
+
+.unreal-factory {
+  padding: 40px 10px;
+  margin-bottom: 10px;
+}
+
+.unreal-factory h1 {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:900;
+  font-size: 190px;
+  font-style: normal;
+  color: aliceblue;
+}
+
+.unreal-description {
+  margin-top: 30px;
+}
+
+.unreal-description p {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  color: aliceblue;
+  font-size: 17px;
+}
+
+hr {
+  width: 100%;
+}
+
+.button-container {
+  padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    /* margin-top: 100px; */
+    /* padding: 0px 50px; */
+    /* width: 900px; */
+  }
+
+  .unreal-factory {
+    padding: 40px 10px;
+    margin-bottom: 10px;
+  }
+
+  .unreal-factory h1 {
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:900;
+    font-size: 80px;
+    font-style: normal;
+    color: aliceblue;
+  }
+
+  .unreal-description {
+    margin-top: 30px;
+  }
+
+  .unreal-description p {
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    color: aliceblue;
+    font-size: 17px;
+  }
+
+  hr {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .landing-model-container {
+    flex-direction: column;
+    width: 480px;
+  }
+
+  .landing-home-container,
+  .model-container {
+    width: 100%;
+  }
+}

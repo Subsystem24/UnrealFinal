@@ -1,0 +1,53 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.modelCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 80px 20px 40px;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  gap: 10px;
+}
+
+.page-button {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 0%;
+  background-color: black;
+  transition: 0.3s;
+  border-radius: 7px;
+  color: white;
+}
+
+.page-button:hover {
+  color: black;
+  background-color: white;
+}
