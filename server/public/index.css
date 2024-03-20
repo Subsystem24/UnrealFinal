@@ -1,0 +1,82 @@
+body {
+  background-image: url(../public/img/inDex4.png);
+  background-color: rgba(30, 39, 64, 1);
+  background-size: cover;
+  height: 100vh;
+}
+
+.frame {
+  display: flex;
+}
+
+.group-1 {
+  margin-left: 10%;
+  margin-top: 7%;
+}
+
+.group-2 {
+  display: flex;
+  margin-left: 5%;
+}
+
+.human1 {
+  margin-top: 75%;
+}
+
+.human2 {
+  margin-top: 40%;
+}
+
+.human3 {
+  margin-top: 70%;
+}
+
+.human4 {
+  margin-top: 57%;
+  margin-left: -9%;
+}
+
+.name {
+  width: 459px;
+  /* height: 212px; */
+  /* left: 169px;
+  top: 179px; */
+  margin-bottom: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 110%;
+  /* or 106px */
+  letter-spacing: 0.02em;
+  font-feature-settings: 'palt' on;
+
+  color: #FFFFFF;
+}
+
+.btnBackground {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  margin-top: 10%;
+  margin-bottom: 13%;
+  padding: 10px;
+  width: 301px;
+  height: 40px;
+}
+
+.loginLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.loginBtn {
+  margin-top: 0px;
+}
+
+svg + svg {
+  margin-left: 5%;
+}

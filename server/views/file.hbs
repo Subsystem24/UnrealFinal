@@ -1,0 +1,82 @@
+{{!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> --}}
+<script type="module" src="https://unpkg.com/@khrongltf/viewer/dist/gltf-viewer.min.js"></script>
+<style>
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    margin-bottom: 50px;
+    height: 80vh; /* New - set the height of the box based on viewport height */
+  }
+
+  model-viewer {
+    width: 100%;      /* Responsive model-viewer */
+    height: 180vw;     /* Further increased from 75vw to 80vw */
+    max-width: 2400px; /* Increased from 1200px */
+    max-height: 2000px; /* Increased from 900px */
+  }
+
+  @media (max-width: 768px) {
+    model-viewer {
+      height: 180vw;   /* Increased from 75vw for smaller screens */
+    }
+  }
+</style>
+
+
+  <main class="container bg-sku-700">
+    <div class="mb-3">
+      <button onclick="goBack()" class="btn" style="color: floralwhite; font-weight:500">Go Back</button>
+    </div>
+    <h1>{{fileName}}</h1>
+    <div class="box d-flex justify-content-center align-items-center">
+      {{!-- <model-viewer camera-controls alt="Model" src="{{file}}">
+      </model-viewer> --}}
+      <div class="box d-flex justify-content-center align-items-center">
+        <canvas id="gltfCanvas"></canvas> <!-- The canvas element for the glTF viewer -->
+      </div>
+
+    </div>
+<script>
+  // Assuming the GLTFViewer library is already included in your page
+
+  // This function is marked as 'async' which allows us to use 'await' inside of it
+  async function initializeViewer() {
+    const canvas = document.getElementById('gltfCanvas');
+    const glContext = canvas.getContext('webgl2');
+    console.log("HI")
+
+    // Initialize the viewer
+    const view = new GlftView(glContext);
+
+    // Create and start the state
+    const state = view.createState();
+    state.sceneIndex = 0; // Assuming this is the index of the scene you want to display
+    state.animationIndices = [0, 1, 2]; // Assuming these are the indices of the animations you want to play
+    state.animationTimer.start();
+
+    // Load the model asynchronously
+    const resourceLoader = new ResourceLoader();
+    state.gltf = await resourceLoader.loadGltf("https://api.box.com/2.0/files/1330321633691/content?access_token=${ACCESS_TOKEN}"); // Replace "{{file}}" with the actual URL to your glTF model
+
+    // Define the render loop
+    const update = () => {
+      view.renderFrame(state, canvas.width, canvas.height);
+      window.requestAnimationFrame(update);
+    };
+
+    // Start the render loop
+    window.requestAnimationFrame(update);
+  }
+
+  // Call the async function to initialize the viewer
+  initializeViewer().catch(console.error); // Log errors, if any
+</script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+    </script>
+  </main>
